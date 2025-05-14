@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .head-page_title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #404a5a;
+            color: white;
+            font-weight: 100;
+            padding: 60px;
+            gap:5px;
+        }
+        .wrap{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 80px;
+            margin-top: 30px;
+        }
+        .btn_group{
+            display: flex;
+        }
+
+        .mybtn{
+            padding: 8px 25px;            
+        }
+
+        .trash_box {
+            display: flex;
+            justify-content: flex-end;  /* 가로 오른쪽 정렬 */
+            align-items: center;        /* 세로 가운데 정렬 (선택사항) */
+            width: 100%;                /* 전체 너비 기준으로 정렬되도록 */
+            margin: 10px 0;             /* 위아래 여백 (선택사항) */
+            gap: 6px;                   /* 아이콘과 버튼 사이 여백 */
+        }
+
+        .movie_object{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px 60px;
+        }
+
+        .movie_info{
+            display: flex;
+            align-items: flex-start;
+
+        }
+        .movie_btn_box {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .movie_img{
+            width: 60px;
+            height: 70px;
+        }
+        .movie_title{
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .movie_like,
+        .movie_people,
+        .movie_when{
+            font-size:12px;
+             
+        }
+
+    </style>
+</head>
+<body>
+    <div id="head-page">
+        <div class="head-page_title">
+            <h2 style="font-weight: 400;">🎬 마이 페이보릿 무비 🖤</h2>
+            <p>순위를 매겨봅시다</p>
+        </div>
+    </div>
+    <div id="main-page" class="wrap">
+        <div class="btn_group">
+            <button id="like_btn" class="mybtn" >좋아요 순으로 정렬</button>
+            <button id="people_btn" class="mybtn" >누적관객수 순으로 정렬</button>
+            <button id="when_btn" class="mybtn" >개봉일 순으로 정렬</button>
+        </div>
+
+        <div class="trash_box">
+            <i class="fa-solid fa-trash" style="color: #404a5a;"></i>
+            <button id="trash_btn">휴지통 보기</button>
+        </div>
+
+        <div id="movie-list">
+            <div class="movie_object">
+                <div class="movie_info">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlQWVmmEWYzKImHdiIUyXbCnH4h5Z1Oe9UYA&s" class="movie_img">
+                    <div id="movie_content">
+                        <div class="movie_title">한산:용의 출현</div>
+                        <div class="movie_like">101</div>
+                        <div class="movie_people">누적관개수 7,265,167 명</div>
+                        <div class="movie_when">개봉일 2022.07.27</div>
+                    </div>
+                </div>
+                <div class="movie_btn_box">
+                    <button id="movie_like">위로!<i class="fa-solid fa-thumbs-up" style="color: #00518f;"></i></button>
+                    <button id="movie_trash">
+                        휴지통으로
+                        <i class="fa-solid fa-trash" style="color: #404a5a;">
+                        </i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
