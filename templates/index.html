@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .head-page_title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #404a5a;
+            color: white;
+            font-weight: 100;
+            padding: 60px;
+            gap:5px;
+        }
+        .wrap{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 80px;
+        }
+        .trash_box {
+            display: flex;
+            justify-content: flex-end;  /* 가로 오른쪽 정렬 */
+            align-items: center;        /* 세로 가운데 정렬 (선택사항) */
+            width: 100%;                /* 전체 너비 기준으로 정렬되도록 */
+            margin: 10px 0;             /* 위아래 여백 (선택사항) */
+            gap: 6px;                   /* 아이콘과 버튼 사이 여백 */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="head-page">
+        <div class="head-page_title">
+            <h2 style="font-weight: 400;">🎬 마이 페이보릿 무비 🖤</h2>
+            <p>순위를 매겨봅시다</p>
+        </div>
+    </div>
+    <div id="main-page" class="wrap">
+        <div class="btn_group">
+            <button id="like_btn">좋아요 순으로 정렬</button>
+            <button id="people_btn">누적관객수 순으로 정렬</button>
+            <button id="when_btn">개봉일 순으로 정렬</button>
+        </div>
+
+        <div class="trash_box">
+            <i class="fa-solid fa-trash" style="color: #404a5a;"></i>
+            <button id="trash_btn">휴지통 보기</button>
+        </div>
+
+        <div id="movie-list">
+            <div class="movie_object">
+                <div class="movie_info">
+                    <div id="movie_img_part">
+                        <img>
+                    </div>
+                    <div id="movie_content">
+                        <div id="movie_title">한산:용의 출현</div>
+                        <div id="movie_like">101</div>
+                        <div id="movie_people">누적관개수 7,265,167 명</div>
+                        <div id="movie_when">개봉일 2022.07.27</div>
+                    </div>
+                </div>
+                <div class="movie_btn">
+                    <button id="movie_like">위로!</button>
+                    <button id="movie_trash">휴지통으로</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
